@@ -1,0 +1,16 @@
+{
+  "links":{
+    "home":"HOME",
+    "shop":"SHOP",
+    "sofa":"SOFA",
+    "cabinet":"CABINET",
+    "blogs":"BLOG",
+    "contact":"CONTACT",
+    "buyNow":"Buy Now"
+  },
+  "custom-text":{
+    "addCart":"Add to Cart",
+    "ourProduct":"Our Products",
+    "newArrival":"New Arrivals"
+  }
+}

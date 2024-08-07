@@ -1,0 +1,19 @@
+/** @type {import('tailwindcss').Config} */
+import flowbitePlugin from "flowbite/plugin";
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    container:{
+      center:true,
+    },
+    fontFamily: {
+      'roboto': ["Roboto", "sans-serif"]
+    },
+    extend: {
+      colors:{
+        'main':'#ffae00'
+      }
+    },
+  },
+  plugins: [require("tw-elements/plugin.cjs")],
+};
