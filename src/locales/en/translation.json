@@ -1,16 +1,20 @@
 {
-  "links":{
-    "home":"HOME",
-    "shop":"SHOP",
-    "sofa":"SOFA",
-    "cabinet":"CABINET",
-    "blogs":"BLOG",
-    "contact":"CONTACT",
-    "buyNow":"Buy Now"
+  "links": {
+    "home": "HOME",
+    "shop": "SHOP",
+    "sofa": "SOFA",
+    "cabinet": "CABINET",
+    "blogs": "BLOG",
+    "contact": "CONTACT",
+    "buyNow": "Buy Now"
   },
-  "custom-text":{
-    "addCart":"Add to Cart",
-    "ourProduct":"Our Products",
-    "newArrival":"New Arrivals"
+  "custom-text": {
+    "addCart": "Add to Cart",
+    "ourProduct": "Our Products",
+    "newArrival": "New Arrivals"
+  },
+  "blogSection": {
+    "text": "LATEST FROM",
+    "title": "OUR BLOG"
   }
 }

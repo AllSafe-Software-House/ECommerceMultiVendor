@@ -4,6 +4,7 @@ import CardElement from "../components/card";
 import ProductsSection from "../components/productsSetion";
 import BannersSection from "../components/BannersSection/BannersSection";
 import ClintesSection from "../components/ClintesSection/ClintesSection";
+import BlogSection from "../components/BlogSection/BlogSection";
 
 export default function Home() {
     return <>
@@ -11,5 +12,6 @@ export default function Home() {
         <BannersSection />
         <ProductsSection />
         <ClintesSection />
+        <BlogSection />
     </>
 }
