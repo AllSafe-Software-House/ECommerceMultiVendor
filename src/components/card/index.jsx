@@ -8,7 +8,7 @@ export default function CardElement({ to, name, price, img }) {
   const { t } = useTranslation('global');
   return <>
     <div className="p-7 group">
-      <div className="relative overflow-hidden a">
+      <div className="relative overflow-hidden">
         <img src="https://template.hasthemes.com/furnish/furnish/img/product/1.jpg" className="w-full" />
         <MainButton text={t('custom-text.addCart')} className={'absolute z-[1] opacity-0 group-hover:opacity-100 duration-150 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'} />
         <div className="absolute w-full h-full top-0 bg-black opacity-0 duration-150 group-hover:opacity-50"></div>
