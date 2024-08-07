@@ -8,12 +8,13 @@ import { useTranslation } from 'react-i18next';
 export default function Hero() {
   const { t } = useTranslation('global')
   return (
-    <section className='min-h-[100vh] flex items-center justify-center bg-[#ece8e5]'>
+    <section className='min-h-[80vh] flex items-center justify-center bg-[#ece8e5]'>
       <div className="container h-full">
         <div className='flex h-full items-center justify-center'>
           <Swiper
             spaceBetween={30}
             navigation={true}
+            fadeEffect={true}
             pagination={{
               clickable: true,
             }}
@@ -29,7 +30,7 @@ export default function Hero() {
                   <h4 className='text-[#282828] mb-4 text-[18px] font-medium'>WELCOME TO OUR</h4>
                   <h1 className='text-[#282828] font-bold text-[40px] md:text-[45px] lg:text-[50px]'>FURNITURE GALLERY</h1>
                   <p className='text-[#282828] lg:w-2/3'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                  <div className='mt-7'>
+                  <div className='my-7'>
                     <MainButton text={t('links.buyNow')} />
                   </div>
                 </div>
@@ -44,13 +45,12 @@ export default function Hero() {
                   <h4 className='text-[#282828] mb-4 text-[18px] font-medium'>WELCOME TO OUR</h4>
                   <h1 className='text-[#282828] font-bold text-[40px] md:text-[45px] lg:text-[50px]'>FURNITURE GALLERY</h1>
                   <p className='text-[#282828] lg:w-2/3'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                  <div className='mt-7'>
+                  <div className='my-7'>
                     <MainButton text={t('links.buyNow')} />
                   </div>
                 </div>
               </div>
             </SwiperSlide>
-
           </Swiper>
         </div>
       </div>
