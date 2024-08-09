@@ -35,7 +35,7 @@ export default function Example() {
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white fixed w-full z-[9999] shadow">
+    <header className="bg-white md:fixed w-full z-[9999] shadow">
       <nav aria-label="Global" className="mx-auto relative flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <MegaMenu onMouseEnter={() => { setMegaMenuOpen(true) }} onMouseLeave={() => setMegaMenuOpen(false)} className={`duration-200 ${megaMenuOpen ? 'visible translate-y-0  opacity-100 hover:visible hover:translate-y-0  hover:opacity-100' : 'invisible delay-200  translate-y-16 opacity-0'}`} />
         <div className="flex lg:flex-1">

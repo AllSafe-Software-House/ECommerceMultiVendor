@@ -9,7 +9,7 @@ export default function CardElement({ to, name, price, img, blog = false, text }
   const { t } = useTranslation('global');
   return <>
     {!blog ?
-      <div className="p-7 group">
+      <div className="p-6 group">
         <div className="relative overflow-hidden">
           <img src={img} className="w-full" />
           <MainButton text={t('custom-text.addCart')} className={'absolute z-[1] opacity-0 group-hover:opacity-100 duration-150 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'} />

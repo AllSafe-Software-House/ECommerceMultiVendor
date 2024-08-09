@@ -11,7 +11,8 @@
   "custom-text": {
     "addCart": "Add to Cart",
     "ourProduct": "Our Products",
-    "newArrival": "New Arrivals"
+    "newArrival": "New Arrivals",
+    "shop":"SHOP"
   },
   "blogSection": {
     "text": "LATEST FROM",
