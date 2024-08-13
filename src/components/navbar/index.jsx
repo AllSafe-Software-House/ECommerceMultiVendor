@@ -63,10 +63,10 @@ export default function Example() {
               {t('links.shop')}
             </NavLink>
           </div>
-          <NavLink to='/sofa' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
+          <NavLink to='/shop' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
             {t('links.sofa')}
           </NavLink>
-          <NavLink to='/cabinet' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
+          <NavLink to='/shop' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
             {t('links.cabinet')}
           </NavLink>
           <NavLink to='/blogs' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
@@ -132,31 +132,16 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <NavLink to='/' className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  {t('links.home')}
-                </NavLink>
-                <NavLink to="/shop" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  {t('links.shop')}
-                </NavLink>
-                <NavLink to='/sofa' className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  {t('links.sofa')}
-                </NavLink>
-                <NavLink to='/cabinet' className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  {t('links.cabinet')}
-                </NavLink>
-                <NavLink to='/blogs' className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  {t('links.blogs')}
-                </NavLink>
-                <NavLink to='/contact' className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  {t('links.contact')}
-                </NavLink>
+                {links.map((link, i) => <NavLink key={i} to={link.path} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  {link.link}
+                </NavLink>)}
               </div>
               <div className="py-6 flex items-center">
                 <CiSearch className='text-[25px] me-3 hover:text-[#ffae00] duration-150 cursor-pointer' />
                 <Menu as="div" className="relative h-[25px] mx-3">
-                    <MenuButton>
-                      <IoSettingsOutline className='text-[25px] hover:text-[#ffae00] duration-150 cursor-pointer' />
-                    </MenuButton>
+                  <MenuButton>
+                    <IoSettingsOutline className='text-[25px] hover:text-[#ffae00] duration-150 cursor-pointer' />
+                  </MenuButton>
                   <MenuItems
                     transition
                     className="absolute -left-full z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"

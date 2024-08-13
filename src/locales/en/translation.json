@@ -12,7 +12,10 @@
     "addCart": "Add to Cart",
     "ourProduct": "Our Products",
     "newArrival": "New Arrivals",
-    "shop":"SHOP"
+    "shop":"SHOP",
+    "product_details":"PRODUCT DETAILS",
+    "wishlist":"Wishlist",
+    "related":"related products"
   },
   "blogSection": {
     "text": "LATEST FROM",
