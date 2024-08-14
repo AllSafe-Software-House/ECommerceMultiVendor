@@ -4,9 +4,11 @@
     "shop": "SHOP",
     "sofa": "SOFA",
     "cabinet": "CABINET",
-    "blogs": "BLOG",
+    "blogs": "BLOGS",
     "contact": "CONTACT",
-    "buyNow": "Buy Now"
+    "buyNow": "Buy Now",
+    "login":"Login",
+    "register":"Register"
   },
   "custom-text": {
     "addCart": "Add to Cart",
@@ -15,7 +17,18 @@
     "shop":"SHOP",
     "product_details":"PRODUCT DETAILS",
     "wishlist":"Wishlist",
-    "related":"related products"
+    "related":"related products",
+    "email":"Email address",
+    "pass":"Password",
+    "first":"First Name",
+    "last":"Last Name",
+    "passConfirm":"Confirm password",
+    "address":"Street address",
+    "city":"City",
+    "subject":"Subject",
+    "message":"Message",
+    "send":"SEND",
+    "contactInfo":"CONTACT INFO"
   },
   "blogSection": {
     "text": "LATEST FROM",

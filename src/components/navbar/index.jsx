@@ -26,8 +26,8 @@ export default function Example() {
   const links = [
     { link: t('links.home'), path: "/" },
     { link: t('links.shop'), path: "/shop" },
-    { link: t('links.sofa'), path: "/shop" },
-    { link: t('links.cabinet'), path: "/shop" },
+    // { link: t('links.sofa'), path: "/shop" },
+    // { link: t('links.cabinet'), path: "/shop" },
     { link: t('links.blogs'), path: "/blogs" },
     { link: t('links.contact'), path: "/contact" },
   ]
@@ -63,12 +63,12 @@ export default function Example() {
               {t('links.shop')}
             </NavLink>
           </div>
-          <NavLink to='/shop' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
+          {/* <NavLink to='/shop' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
             {t('links.sofa')}
           </NavLink>
           <NavLink to='/shop' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
             {t('links.cabinet')}
-          </NavLink>
+          </NavLink> */}
           <NavLink to='/blogs' className="text-base font-medium font-roboto hover:text-[#ffae00] duration-200 leading-6 text-gray-900">
             {t('links.blogs')}
           </NavLink>
@@ -89,19 +89,19 @@ export default function Example() {
               className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <MenuItem>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                <Link to={''} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                   Your Profile
-                </a>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                  Settings
-                </a>
+                <Link to={'register'} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  {t('links.register')}
+                </Link>
               </MenuItem>
               <MenuItem>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                  Sign out
-                </a>
+                <Link to={'/login'} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                {t('links.login')}
+                </Link>
               </MenuItem>
             </MenuItems>
           </Menu>

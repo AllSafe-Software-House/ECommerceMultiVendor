@@ -215,7 +215,7 @@ export default function Products() {
                         </div>
                         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
                             {/* Filters */}
-                            <form className="hidden lg:block">
+                            <form className="hidden lg:block h-[10px] lg:sticky lg:top-0">
                                 <h3 className="font-semibold text-[25px] py-6">Categories</h3>
 
                                 <ul role="list" className="space-y-4  pb-6 text-sm font-medium text-gray-900">
