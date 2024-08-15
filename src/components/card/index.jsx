@@ -38,7 +38,7 @@ export default function CardElement({ to, name, price, img, blog = false, text }
       :
       <div className="group">
         <div className="relative overflow-hidden">
-          <Link to={to}>
+          <Link to={`/blog-details`}>
           <img src={img} className="w-full" />
           <GoLink className='absolute text-white text-[25px] z-[1] opacity-0 group-hover:opacity-100 duration-150 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' />
           <div className="absolute w-full h-full top-0 bg-black opacity-0 duration-150 group-hover:opacity-50"></div>
@@ -46,7 +46,7 @@ export default function CardElement({ to, name, price, img, blog = false, text }
         </div>
         <div className="mt-5">
           <h4 className="text-[18px] font-roboto font-medium text-main">12 Jun 2022</h4>
-          <Link to={to}>
+          <Link to={`/blog-details`}>
             <h4 className="text-[18px] font-roboto  duration-150 hover:text-main">How Furniture Is Going To Change Your Business Strategies.</h4>
           </Link>
           <p className="font-roboto mt-6">

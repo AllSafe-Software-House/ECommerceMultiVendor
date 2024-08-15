@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
+import CheckOut from "./pages/CheckOut";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +22,8 @@ const AppRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/blogs" element={<Blog />} />
+      <Route path="/blog-details" element={<BlogDetails />} />
+      <Route path="/checkout" element={<CheckOut />} />
     </Routes>
   );
 };
