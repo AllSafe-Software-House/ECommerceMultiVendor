@@ -4,10 +4,6 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import AppRoutes from "./routes";
 import Footer from "./components/footer";
-import NewsLetter from "./components/newsLetter";
-import CartPage from "./components/cart";
-import MegaMenu from "./components/mega-menu";
-
 function App() {
   const { i18n } = useTranslation();
   useEffect(() => {
@@ -19,11 +15,7 @@ function App() {
     <div className="App">
       <Navbar />
       <AppRoutes />
-      {/* <div className="container">
-        <CartPage />
-      </div> */}
-      {/* <NewsLetter /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

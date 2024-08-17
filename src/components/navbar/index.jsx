@@ -100,12 +100,14 @@ export default function Example() {
               </MenuItem>
               <MenuItem>
                 <Link to={'/login'} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
-                {t('links.login')}
+                  {t('links.login')}
                 </Link>
               </MenuItem>
             </MenuItems>
           </Menu>
-          <LuShoppingCart className='text-[25px] ms-3 hover:text-[#ffae00] duration-150 cursor-pointer' />
+          <Link to={'/cart'}>
+            <LuShoppingCart className='text-[25px] ms-3 hover:text-[#ffae00] duration-150 cursor-pointer' />
+          </Link>
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

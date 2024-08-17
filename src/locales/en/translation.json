@@ -9,7 +9,9 @@
     "buyNow": "Buy Now",
     "login":"Login",
     "register":"Register",
-    "checkout":"CHECKOUT"
+    "checkout":"CHECKOUT",
+    "cart":"CART",
+    "wishlist":"WISHLIST"
   },
   "custom-text": {
     "addCart": "Add to Cart",
@@ -48,5 +50,12 @@
   "blogSection": {
     "text": "LATEST FROM",
     "title": "OUR BLOG"
+  },
+  "table":{
+    "image":"Image",
+    "productName":"Product Name",
+    "quantity":"Quantity",
+    "total":"Total",
+    "remove":"Remove"
   }
 }
