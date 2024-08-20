@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/notFonud";
-import Vendors from "./pages/vendors";
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/home"));
@@ -16,6 +15,8 @@ const BlogDetails = lazy(() => import("./pages/BlogDetails"));
 const CheckOut = lazy(() => import("./pages/CheckOut"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Wishlist = lazy(() => import("./pages/Wishlist"));
+const Vendors = lazy(() => import("./pages/vendors"));
+const VendorDetails = lazy(() => import("./pages/vendorDetails"));
 
 const AppRoutes = () => {
   return (
@@ -34,7 +35,7 @@ const AppRoutes = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/vendors" element={<Vendors />} />
-        <Route path="/vendorDetails/:id" element={<Wishlist />} />
+        <Route path="/vendor-details/:id" element={<VendorDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

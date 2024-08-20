@@ -80,41 +80,49 @@ export default function CardElement({
 }
 export const VendorCard = () => {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt />
-      </a>
-      <div className="p-5">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
-        </p>
-        <a
-          href="#"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Read more
-          <svg
-            className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
+    <div className="bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+      <Link to='/vendor-details/1' href="#">
+        <img
+          className="rounded-t-lg h-40 w-full"
+          src="/src/assets/images/22.jpg"
+          alt
+        />
+      </Link>
+      <div className="p-5 flex justify-between items-center">
+        <div className="content text-white group-hover:text-blue-500">
+          <Link to='/vendor-details/1' className="text-2xl font-bold mb -2">AllSafe Vendor</Link>
+
+          <a
+            className="flex items-center my-2 group-hover:text-yellow-500"
+            href="mailto:allsafe@allsafe.com"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M1 5h12m0 0L9 1m4 4L9 9"
+            <MdEmail className="me-1" /> allsafe@allsafe.com
+          </a>
+          <a
+            className="flex items-center my-2 group-hover:text-yellow-500"
+            href="tel:01234567891"
+          >
+            <BsFillTelephoneFill className="me-1" /> +20 123 456 7891
+          </a>
+        </div>
+        <div className="avatar">
+          <Link to='/vendor-details/1' className="image w-[80px] h-[80px]">
+            <img
+              src="/src/assets/images/2.jpg"
+              className="bg-red-400 rounded-[50%] w-full h-full shadow-md group-hover:bg-[#ffae00] group-hover:-mt-24 transition-all duration-300"
+              alt
             />
-          </svg>
-        </a>
+          </Link>
+          <p className="my-2">
+            <Rating
+              className="text-1xl"
+              emptySymbol="fa fa-star-o text-[#b1b1b1]"
+              fullSymbol="fa fa-star text-[#ff9933]"
+              initialRating={2.5}
+              readonly
+            />
+          </p>
+        </div>
       </div>
     </div>
   );
