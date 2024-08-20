@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <div className="h-[85px] hidden lg:block"></div>
       <AppRoutes />
       <Footer />
     </div>

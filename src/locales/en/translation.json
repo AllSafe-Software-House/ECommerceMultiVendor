@@ -11,7 +11,8 @@
     "register":"Register",
     "checkout":"CHECKOUT",
     "cart":"CART",
-    "wishlist":"WISHLIST"
+    "wishlist":"WISHLIST",
+    "vendors":"VENDORS"
   },
   "custom-text": {
     "addCart": "Add to Cart",

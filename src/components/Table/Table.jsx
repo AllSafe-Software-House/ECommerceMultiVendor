@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import MainButton from '../button';
 import { t } from 'i18next';

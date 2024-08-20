@@ -1,23 +1,17 @@
-import React, { useState } from 'react'
-import HeadBanner from '../components/HeadBanner/HeadBanner'
-import { useTranslation } from 'react-i18next'
 import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
+  MenuItems
 } from '@headlessui/react'
+import { FunnelIcon } from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
-import CardElement from '../components/card'
+import { Link } from 'react-router-dom'
+import HeadBanner from '../components/HeadBanner/HeadBanner'
 
 
 export default function BlogDetails() {

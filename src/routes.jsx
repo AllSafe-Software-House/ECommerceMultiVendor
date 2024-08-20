@@ -1,34 +1,43 @@
-// routes.jsx
 import { Route, Routes } from "react-router-dom";
-import About from "./pages/about";
-import Home from "./pages/home";
-import Shop from "./pages/Shop";
-import ProductDetails from "./pages/ProductDetails";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import ContactUs from "./pages/ContactUs";
-import Blog from "./pages/Blog";
-import BlogDetails from "./pages/BlogDetails";
-import CheckOut from "./pages/CheckOut";
-import Cart from "./pages/Cart";
-import Wishlist from "./pages/Wishlist";
+import { lazy, Suspense } from "react";
+import NotFound from "./pages/notFonud";
+import Vendors from "./pages/vendors";
+
+// Lazy load pages
+const Home = lazy(() => import("./pages/home"));
+const About = lazy(() => import("./pages/about"));
+const Shop = lazy(() => import("./pages/Shop"));
+const ProductDetails = lazy(() => import("./pages/ProductDetails"));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogDetails = lazy(() => import("./pages/BlogDetails"));
+const CheckOut = lazy(() => import("./pages/CheckOut"));
+const Cart = lazy(() => import("./pages/Cart"));
+const Wishlist = lazy(() => import("./pages/Wishlist"));
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/shop" element={<Shop />} />
-      <Route path="/product-details" element={<ProductDetails />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/blogs" element={<Blog />} />
-      <Route path="/blog-details" element={<BlogDetails />} />
-      <Route path="/checkout" element={<CheckOut />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/wishlist" element={<Wishlist />} />
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/product-details/:id" element={<ProductDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="/blog-details/:id" element={<BlogDetails />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/vendors" element={<Vendors />} />
+        <Route path="/vendorDetails/:id" element={<Wishlist />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 };
 

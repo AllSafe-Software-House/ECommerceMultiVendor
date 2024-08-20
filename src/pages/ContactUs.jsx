@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import MainButton from '../components/button';
 import HeadBanner from '../components/HeadBanner/HeadBanner';
@@ -99,7 +99,7 @@ export default function ContactUs() {
         </section>
         <section className='py-16'>
             <div className="container">
-                <iframe className='w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3486038594783!2d31.358048876461943!3d30.055540518043287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583dafd66227f1%3A0xd0de03f9664f6750!2sAll%20Safe!5e0!3m2!1sen!2seg!4v1723640294248!5m2!1sen!2seg" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className='w-full' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3486038594783!2d31.358048876461943!3d30.055540518043287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583dafd66227f1%3A0xd0de03f9664f6750!2sAll%20Safe!5e0!3m2!1sen!2seg!4v1723640294248!5m2!1sen!2seg" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </>

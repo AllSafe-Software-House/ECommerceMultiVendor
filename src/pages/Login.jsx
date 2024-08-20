@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import MainButton from '../components/button';
@@ -44,8 +44,9 @@ export default function Login() {
                         <div className="mt-6 flex items-center gap-x-6">
                             <MainButton text={t('links.login')} />
                         </div>
-                        <p className='text-main py-4'>Lost Your Password?</p>
-                        <p className='py-4'>Don't have account? <Link to={'/register'} className="text-main" >Sign Up</Link></p>
+                        <Link className='text-main pt-4 block'>Lost Your Password?</Link>
+                        <p className='pt-4'>{`Don't have account? `}<Link to={'/register'} className="text-main" >Sign Up</Link></p>
+                        <p className=''>{`Sign up as vendor? `}<Link to={'/register'} className="text-main" >Sign Up</Link></p>
                     </form>
                 </div>
             </div>
