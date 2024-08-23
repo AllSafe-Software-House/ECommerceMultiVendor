@@ -1,7 +1,9 @@
 .active {
-    background-color: #111827;
-    color: #fff;
+    color: #ff9933 !important;
 }
 nav a {
     color: #000;
+}
+.childClass:hover span {
+    color: #ff9933 !important;
 }

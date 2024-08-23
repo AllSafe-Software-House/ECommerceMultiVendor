@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import { useTranslation } from 'react-i18next'
 import MainButton from '../button'

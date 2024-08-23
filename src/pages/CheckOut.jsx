@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HeadBanner from '../components/HeadBanner/HeadBanner'
 import { useTranslation } from 'react-i18next'
 import CheckOutFrom from '../components/CheckOutForm/CheckOutFrom'

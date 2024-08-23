@@ -1,3 +1,6 @@
+import { DetailsTaps } from "../components/DetailsTaps/DetailsTaps";
+import CardElement from "../components/card";
+import Review from "../components/review";
 import SideBar from "../components/sidebar";
 import BannerVendor from "../components/vendorBanner";
 const subCategories = [
@@ -51,14 +54,38 @@ const filters = [
     ],
   },
 ];
+const arrOfObj = [
+  {
+    id: "1",
+    title: "Products",
+    value: (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <CardElement img={"/src/assets/images/3.jpg"} />
+        <CardElement img={"/src/assets/images/3.jpg"} />
+        <CardElement img={"/src/assets/images/3.jpg"} />
+        <CardElement img={"/src/assets/images/3.jpg"} />
+        <CardElement img={"/src/assets/images/3.jpg"} />
+        <CardElement img={"/src/assets/images/3.jpg"} />
+      </div>
+    ),
+  },
+  {
+    id: "2",
+    title: "Reviews",
+    value: <Review />,
+  },
+];
 export default function VendorDetails() {
   return (
     <section className="productDetails my-5">
       <div className="container">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-4 gap-4">
           <SideBar filters={filters} subCategories={subCategories} />
-          <div className="col-span-2">
-            <BannerVendor/>
+          <div className="lg:col-span-3">
+            <BannerVendor />
+            <div className="navtabs">
+              <DetailsTaps arr={arrOfObj} />
+            </div>
           </div>
         </div>
       </div>

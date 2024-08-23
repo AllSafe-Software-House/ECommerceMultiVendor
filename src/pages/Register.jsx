@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useTranslation } from 'react-i18next'
 import HeadBanner from '../components/HeadBanner/HeadBanner';
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'

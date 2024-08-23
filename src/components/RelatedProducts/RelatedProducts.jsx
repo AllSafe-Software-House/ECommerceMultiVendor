@@ -1,4 +1,4 @@
-import React from 'react'
+
 import MainTitle from '../mainTitle'
 import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'

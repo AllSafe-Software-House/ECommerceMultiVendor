@@ -11,17 +11,17 @@ const subCategories = [
   { name: "Laptop Sleeves", href: "#" },
 ];
 const filters = [
-    {
-        id: "category",
-        name: "Category",
-        options: [
-          { value: "new-arrivals", label: "New Arrivals", checked: false },
-          { value: "sale", label: "Sale", checked: false },
-          { value: "travel", label: "Travel", checked: true },
-          { value: "organization", label: "Organization", checked: false },
-          { value: "accessories", label: "Accessories", checked: false },
-        ],
-      },
+  {
+    id: "category",
+    name: "Category",
+    options: [
+      { value: "new-arrivals", label: "New Arrivals", checked: false },
+      { value: "sale", label: "Sale", checked: false },
+      { value: "travel", label: "Travel", checked: true },
+      { value: "organization", label: "Organization", checked: false },
+      { value: "accessories", label: "Accessories", checked: false },
+    ],
+  },
   {
     id: "State",
     name: "State",
@@ -54,6 +54,13 @@ const filters = [
     ],
   },
 ];
+const sortOptions = [
+  { name: "Most Popular", href: "#", current: true },
+  { name: "Best Rating", href: "#", current: false },
+  { name: "Newest", href: "#", current: false },
+  { name: "Price: Low to High", href: "#", current: false },
+  { name: "Price: High to Low", href: "#", current: false },
+];
 export default function Vendors() {
   const { t } = useTranslation("global");
   return (
@@ -61,18 +68,17 @@ export default function Vendors() {
       <HeadBanner text={t("links.vendors")} />
       <section className="vendors my-5">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            <SideBar filters={filters} subCategories={subCategories} />
-            <div className="vendorsList col-span-2 grid md:grid-cols-2 gap-4">
-              <VendorCard />
-              <VendorCard />
-              <VendorCard />
-              <VendorCard />
-              <VendorCard />
-              <VendorCard />
-              <VendorCard />
-            </div>
-          </div>
+            <SideBar title={"Our Vendors"} filters={filters} subCategories={subCategories} sortOptions={sortOptions}>
+              <div className="vendorsList grid md:grid-cols-2 gap-4">
+                <VendorCard />
+                <VendorCard />
+                <VendorCard />
+                <VendorCard />
+                <VendorCard />
+                <VendorCard />
+                <VendorCard />
+              </div>
+            </SideBar>
         </div>
       </section>
     </>

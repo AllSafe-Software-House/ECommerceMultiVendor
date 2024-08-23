@@ -21,7 +21,7 @@ export default function CardElement({
   return (
     <>
       {!blog ? (
-        <div className="p-6 group">
+        <div className="group">
           <div className="relative overflow-hidden">
             <MainButton
               text={t("custom-text.addCart")}
@@ -80,17 +80,18 @@ export default function CardElement({
 }
 export const VendorCard = () => {
   return (
-    <div className="bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-      <Link to='/vendor-details/1' href="#">
-        <img
-          className="rounded-t-lg h-40 w-full"
-          src="/src/assets/images/22.jpg"
-          alt
-        />
+    <div
+      className="bg-white"
+      style={{ boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.08)" }}
+    >
+      <Link to="/vendor-details/1" href="#">
+        <img className="h-40 w-full" src="/src/assets/images/22.jpg" alt="" />
       </Link>
       <div className="p-5 flex justify-between items-center">
-        <div className="content text-white group-hover:text-blue-500">
-          <Link to='/vendor-details/1' className="text-2xl font-bold mb -2">AllSafe Vendor</Link>
+        <div className="content text-dark group-hover:text-blue-500">
+          <Link to="/vendor-details/1" className="text-2xl font-bold mb -2">
+            AllSafe Vendor
+          </Link>
 
           <a
             className="flex items-center my-2 group-hover:text-yellow-500"
@@ -106,11 +107,11 @@ export const VendorCard = () => {
           </a>
         </div>
         <div className="avatar">
-          <Link to='/vendor-details/1' className="image w-[80px] h-[80px]">
+          <Link to="/vendor-details/1" className="image w-[80px] h-[80px]">
             <img
               src="/src/assets/images/2.jpg"
-              className="bg-red-400 rounded-[50%] w-full h-full shadow-md group-hover:bg-[#ffae00] group-hover:-mt-24 transition-all duration-300"
-              alt
+              className="bg-red-400 rounded-[50%] w-full h-full shadow-md group-hover:-mt-24 transition-all duration-300"
+              alt=""
             />
           </Link>
           <p className="my-2">
@@ -125,5 +126,26 @@ export const VendorCard = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+export const CategoryCard = () => {
+  return (
+    <Link
+      to="/shop?category"
+      className="categoryCard group bg-white"
+    >
+      <div className="category__img">
+        <img src="/src/assets/images/download.jpg" alt="" />
+      </div>
+      <div className="category__content overflow-hidden relative">
+        <div className="category__name relative top-0 group-hover:-top-12 transition-all text-center font-bold mt-3">
+          <h2>Notebook</h2>
+        </div>
+        <div className="category__name text-[#ff9933] absolute top-12 group-hover:top-0 left-1/2 -translate-x-1/2 transition-all text-center font-bold mt-3">
+          <h2>Shop Now</h2>
+        </div>
+      </div>
+    </Link>
   );
 };

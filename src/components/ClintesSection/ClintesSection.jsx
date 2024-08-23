@@ -1,9 +1,9 @@
-import React from 'react'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export default function ClintesSection() {
   return <>
-    <section className='py-36' style={{ backgroundImage: `url('https://template.hasthemes.com/furnish/furnish/img/bg/1.jpg')`, backgroundSize: 'cover' }}>
+    <section className="py-20" style={{ backgroundImage: `url('https://template.hasthemes.com/furnish/furnish/img/bg/1.jpg')`, backgroundSize: 'cover' }}>
       <div className="container">
 
         <Swiper>

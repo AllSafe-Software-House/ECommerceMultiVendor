@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HeadBanner from '../components/HeadBanner/HeadBanner'
 import Products from '../components/Products/Products'
 import { useTranslation } from 'react-i18next'

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/notFonud";
+import Loader from "./components/loader";
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/home"));
@@ -17,10 +18,11 @@ const Cart = lazy(() => import("./pages/Cart"));
 const Wishlist = lazy(() => import("./pages/Wishlist"));
 const Vendors = lazy(() => import("./pages/vendors"));
 const VendorDetails = lazy(() => import("./pages/vendorDetails"));
+const FAQ = lazy(() => import("./pages/faq"));
 
 const AppRoutes = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader/>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -36,6 +38,7 @@ const AppRoutes = () => {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/vendor-details/:id" element={<VendorDetails />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
