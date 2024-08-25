@@ -12,7 +12,7 @@ export default function RelatedProducts() {
                 <MainTitle title={t('custom-text.related')} />
                 <Swiper
                     slidesPerView={1}
-                    spaceBetween={1}
+                    spaceBetween={30}
                     breakpoints={{
                         586: {
                             slidesPerView: 2,

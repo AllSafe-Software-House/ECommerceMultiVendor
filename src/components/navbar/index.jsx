@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import './style.css';
-import logo from '../../assets/images/logo.png'
+import "./style.css";
+import logo from "../../assets/images/logo.png";
+import { IoCart } from "react-icons/io5";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 export default function Example() {
   const { t } = useTranslation("global");
   const [open, setOpen] = useState(false);
@@ -16,8 +19,8 @@ export default function Example() {
       { id: "1", link: t("links.home"), path: "/" },
       { id: "2", link: t("links.shop"), path: "/shop", megaDropDown: true },
       { id: "3", link: t("links.blogs"), path: "/blogs" },
-      { id: "4", link: 'PAGES', dropDown: true },
-      { id: "5", link: t("links.vendors"), path: "/vendors"},
+      { id: "4", link: "PAGES", dropDown: true },
+      { id: "5", link: t("links.vendors"), path: "/vendors" },
       { id: "6", link: t("links.contact"), path: "/contact" },
     ];
 
@@ -195,54 +198,118 @@ export default function Example() {
   };
 
   return (
-    <nav className="bg-white fixed top-0 w-full text-[black] z-[2]">
+    <nav className="bg-white shadow fixed top-0 w-full text-[black] z-[2]">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <Link
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
-            src={logo}
-            className="h-8"
-            alt="Flowbite Logo"
-          />
+          <img src={logo} className="h-8" alt="Flowbite Logo" />
           {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-[black]">
             Flowbite
           </span> */}
         </Link>
-        <button
-          onClick={toggleMenu}
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
-          aria-controls="mega-menu-full"
-          aria-expanded={open}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+        <div className="conte flex items-center md:order-2">
+          <button
+            onClick={toggleMenu}
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+            aria-controls="mega-menu-full"
+            aria-expanded={open}
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div className="icons flex items-center">
+            <Link to="/cart">
+              <FiShoppingCart className="text-3xl" />
+            </Link>
+            <Link to="/wishlist">
+              <FaRegHeart className="text-2xl mx-3" />
+            </Link>
+            <div className="avatar-item">
+              <img
+                id="avatarButton"
+                type="button"
+                data-dropdown-toggle="userDropdown"
+                data-dropdown-placement="bottom-start"
+                className="w-10 h-10 rounded-full cursor-pointer"
+                src="/src/assets/images/pp.jpg"
+                alt="User dropdown"
+              />
+              <div
+                id="userDropdown"
+                className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+              >
+                <div className="px-4 py-3 text-sm text-gray-900 dark:text-[black]">
+                  <div className="font-bold">All Safe</div>
+                  <div className="font-medium truncate">allsafe@allsafe.com</div>
+                </div>
+                <ul
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="avatarButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#ff9933] dark:hover:text-[black]"
+                    >
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#ff9933] dark:hover:text-[black]"
+                    >
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#ff9933] dark:hover:text-[black]"
+                    >
+                      Orders
+                    </a>
+                  </li>
+                </ul>
+                <div className="py-1">
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-[#ff9933] dark:hover:text-[black]"
+                  >
+                    Sign out
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           id="mega-menu-full"
-          className={`items-center justify-between ${open ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`}
+          className={`items-center justify-between ${
+            open ? "block" : "hidden"
+          } w-full md:flex md:w-auto md:order-1`}
         >
           <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
             {renderLinks()}
           </ul>
         </div>
-        
       </div>
     </nav>
   );

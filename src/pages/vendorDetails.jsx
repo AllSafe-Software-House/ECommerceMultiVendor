@@ -79,14 +79,13 @@ export default function VendorDetails() {
   return (
     <section className="productDetails my-5">
       <div className="container">
-        <div className="grid lg:grid-cols-4 gap-4">
-          <SideBar filters={filters} subCategories={subCategories} />
-          <div className="lg:col-span-3">
+        <div className="grid lg:grid-cols-1 gap-4">
+          <SideBar filters={filters} subCategories={subCategories}>
             <BannerVendor />
             <div className="navtabs">
               <DetailsTaps arr={arrOfObj} />
             </div>
-          </div>
+          </SideBar>
         </div>
       </div>
     </section>
