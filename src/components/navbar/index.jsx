@@ -153,28 +153,40 @@ export default function Example() {
               className="absolute invisible w-full group-hover:visible left-0 mt-1 bg-white border-gray-200 shadow-lg border-y dark:bg-white dark:border-white group-hover:block transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100 group-hover:delay-100 md:w-48"
             >
               <ul aria-labelledby="dropdown-button">
-                <li className="block lg:hidden">
+                <li>
                   <Link
                     to="/"
                     className="text-[black] block p-3 rounded-lg hover:text-[white] dark:hover:text-[#ff9933]"
-                    onClick={closeMenu} // Close menu on click
+                    onClick={closeMenu}
                   >
-                    <div className="font-semibold">Option B</div>
-                    <span className="text-sm text-gray-500 dark:text-[black]">
-                      Description for Option A.
-                    </span>
+                    <Link to={'/not-found'}>Not Found</Link>
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/"
                     className="text-[black] block p-3 rounded-lg hover:text-[white] dark:hover:text-[#ff9933]"
-                    onClick={closeMenu} // Close menu on click
+                    onClick={closeMenu}
                   >
-                    <div className="font-semibold">Option A</div>
-                    <span className="text-sm text-gray-500 dark:text-[black]">
-                      Description for Option A.
-                    </span>
+                    <Link to={'/faq'}>FAQ Page</Link>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cart"
+                    className="text-[black] block p-3 rounded-lg hover:text-[white] dark:hover:text-[#ff9933]"
+                    onClick={closeMenu}
+                  >
+                    <Link to={'/cart'}>Cart</Link>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cart"
+                    className="text-[black] block p-3 rounded-lg hover:text-[white] dark:hover:text-[#ff9933]"
+                    onClick={closeMenu}
+                  >
+                    <Link to={'/wishlist'}>Wishlist</Link>
                   </Link>
                 </li>
               </ul>

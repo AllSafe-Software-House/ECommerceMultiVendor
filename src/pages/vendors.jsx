@@ -69,6 +69,7 @@ export default function Vendors() {
       <section className="vendors my-5">
         <div className="container">
             <SideBar title={"Our Vendors"} filters={filters} subCategories={subCategories} sortOptions={sortOptions}>
+              <input/>
               <div className="vendorsList grid md:grid-cols-2 gap-4">
                 <VendorCard />
                 <VendorCard />
